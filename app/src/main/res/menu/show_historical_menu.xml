@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/set_range"
+    android:title="@string/set_time_range"/>
+    <item android:id="@+id/order_by"
+        android:title="@string/order_by"/>
+</menu>

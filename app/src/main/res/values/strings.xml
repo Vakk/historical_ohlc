@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">OHLC</string>
+    <string-array name="menu_content">
+        <item>Name</item>
+        <item>Search new</item>
+        <item>Settings</item>
+        <item>Exit</item>
+    </string-array>
+    <string name="column_header_date">DATE</string>
+    <string name="column_header_open">OPEN</string>
+    <string name="column_header_high">HIGH</string>
+    <string name="column_header_low">LOW</string>
+    <string name="column_header_close">CLOSE</string>
+    <string name="send">Send</string>
+    <string name="server_response_waiting">Waiting gor server response</string>
+    <string name="set_time_range">Set time range</string>
+    <string name="order_by">Order by</string>
+    <string-array name="sort_by">
+        <item>Date</item>
+        <item>Open</item>
+        <item>High</item>
+        <item>Low</item>
+        <item>Close</item>
+    </string-array>
+</resources>
