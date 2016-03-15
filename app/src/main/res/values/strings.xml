@@ -22,4 +22,12 @@
         <item>Low</item>
         <item>Close</item>
     </string-array>
+    <string name="set">Set</string>
+    <string name="low_date_example">1970-01-01</string>
+    <string name="high_date_example">2020-12-31</string>
+    <string name="by_less">By less</string>
+    <string name="by_greater">By greater</string>
+    <string name="less">Less</string>
+    <string name="rank_by">Rank by</string>
+    <string name="greater">Greater</string>
 </resources>

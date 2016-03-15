@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -18,9 +17,10 @@ import java.util.List;
 /**
  * Created by vakk on 3/13/16.
  */
-public class TickersAdapter extends BaseAdapter implements Filterable{
+public class TickersAdapter extends BaseAdapter implements Filterable {
     List<Ticker> list;
     Context context;
+
     public TickersAdapter(Context context, ArrayList<Ticker> tickers) {
         this.context = context;
         list = tickers;
@@ -62,12 +62,12 @@ public class TickersAdapter extends BaseAdapter implements Filterable{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        if (convertView==null){
-            convertView=inflater.inflate(R.layout.tickers_dropdown_item,parent,false);
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.tickers_dropdown_item, parent, false);
         }
         Ticker ticker = getItem(position);
-        ((TextView)convertView.findViewById(R.id.code)).setText(ticker.getCode());
-        ((TextView)convertView.findViewById(R.id.name)).setText(ticker.getName());
+        ((TextView) convertView.findViewById(R.id.code)).setText(ticker.getCode());
+        ((TextView) convertView.findViewById(R.id.name)).setText(ticker.getName());
         return convertView;
     }
 
@@ -77,7 +77,7 @@ public class TickersAdapter extends BaseAdapter implements Filterable{
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 FilterResults filterResults = new FilterResults();
-                if (constraint !=null){
+                if (constraint != null) {
                     List<Ticker> tickers = searchTickers(constraint);
                     filterResults.values = tickers;
                     filterResults.count = tickers.size();
@@ -87,19 +87,19 @@ public class TickersAdapter extends BaseAdapter implements Filterable{
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                if (results!=null && results.count>0){
-                    list = (List<Ticker>)results.values;
+                if (results != null && results.count > 0) {
+                    list = (List<Ticker>) results.values;
                     notifyDataSetChanged();
-                }
-                else notifyDataSetInvalidated();
+                } else notifyDataSetInvalidated();
             }
         };
-                return filter;
+        return filter;
     }
-    private List<Ticker> searchTickers(CharSequence code){
-        List<Ticker>tickers = new ArrayList<>();
-        for (Ticker ticker:list){
-            if (ticker.getCode().contains(code)){
+
+    private List<Ticker> searchTickers(CharSequence code) {
+        List<Ticker> tickers = new ArrayList<>();
+        for (Ticker ticker : list) {
+            if (ticker.getCode().contains(code)) {
                 tickers.add(ticker);
             }
         }

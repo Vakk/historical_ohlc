@@ -4,4 +4,6 @@
     android:title="@string/set_time_range"/>
     <item android:id="@+id/order_by"
         android:title="@string/order_by"/>
+    <item android:id= "@+id/order_rank_by"
+        android:title="@string/rank_by"/>
 </menu>
